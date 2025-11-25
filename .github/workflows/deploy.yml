@@ -24,4 +24,4 @@ jobs:
 
       - name: Import solution into LIVE
         run: |
-          pac solution import --path .G:/Daily/New folder/Nonprofits-master/CommonDataModelforNonprofits/bin/Debug/NonprofitCore.zip --force-overwrite --publish-changes
+          pac solution import --path ./solution/CommonDataModelforNonprofits.zip --force-overwrite --publish-changes
