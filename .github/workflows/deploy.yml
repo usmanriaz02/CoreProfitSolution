@@ -19,16 +19,9 @@ jobs:
           dotnet tool install --global Microsoft.PowerApps.CLI.Tool
           echo ${PATH=$PATH:$HOME/.dotnet/tools} >> $env:GITHUB_ENV
 
-      - name: Authenticate to Test
-        run: pac auth create --name SalesTrial --applicationId "03f517a9-0b8a-474b-a681-b3cd89944531" --clientSecret "qIt8Q~firAt69GZ9njwfgy8eTf1xO1POwgFRebgF" --tenant "4661aaa7-3476-4224-9d3d-ca650e868c0a" --environment "https://org0da3701e.crm4.dynamics.com"
-
-      - name: Export solution from TEST
-        run: |
-          pac solution export --name "NonprofitCore" --path ./solutions/NonprofitCore.zip --managed false --overwrite
-
       - name: Authenticate to Live
         run: pac auth create --name EvincibleSolutionsUAT --applicationId "03f517a9-0b8a-474b-a681-b3cd89944531" --clientSecret "qIt8Q~firAt69GZ9njwfgy8eTf1xO1POwgFRebgF" --tenant "4661aaa7-3476-4224-9d3d-ca650e868c0a" --environment "https://evsuat.crm4.dynamics.com"
 
       - name: Import solution into LIVE
         run: |
-          pac solution import --path ./solutions/NonprofitCore.zip --force-overwrite --publish-changes
+          pac solution import --path .G:/Daily/New folder/Nonprofits-master/CommonDataModelforNonprofits/bin/Debug/NonprofitCore.zip --force-overwrite --publish-changes
