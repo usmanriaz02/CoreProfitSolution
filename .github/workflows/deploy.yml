@@ -27,7 +27,7 @@ jobs:
           pac solution export --name "NonprofitCore" --path ./solutions/NonprofitCore.zip --managed false --overwrite
 
       - name: Authenticate to Live
-        run: pac auth create --name Evincible Solutions UAT --applicationId "03f517a9-0b8a-474b-a681-b3cd89944531" --clientSecret "qIt8Q~firAt69GZ9njwfgy8eTf1xO1POwgFRebgF" --tenant "4661aaa7-3476-4224-9d3d-ca650e868c0a" --environment "https://evsuat.crm4.dynamics.com"
+        run: pac auth create --name EvincibleSolutionsUAT --applicationId "03f517a9-0b8a-474b-a681-b3cd89944531" --clientSecret "qIt8Q~firAt69GZ9njwfgy8eTf1xO1POwgFRebgF" --tenant "4661aaa7-3476-4224-9d3d-ca650e868c0a" --environment "https://evsuat.crm4.dynamics.com"
 
       - name: Import solution into LIVE
         run: |
