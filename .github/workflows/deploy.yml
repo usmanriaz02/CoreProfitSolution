@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:  # manual run option6
+  workflow_dispatch:  # manual run option7
 
 jobs:
   deploy:
