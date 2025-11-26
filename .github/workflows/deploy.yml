@@ -31,4 +31,4 @@ jobs:
 
       - name: Import solution into LIVE
         run: |
-          pac solution import --path ./solution/NonprofitCore.zip --force-overwrite --publish-changes
+          pac solution import --path ./solutions/NonprofitCore.zip --force-overwrite --publish-changes
